@@ -1,35 +1,37 @@
+# `react`
 
-🌾 AgriSmart ---- Fertilizer Recommendation System
-A smart, AI-powered application that recommends the most suitable fertilizers for farmers. It works in two modes:
+React is a JavaScript library for creating user interfaces.
 
-Soil Report-Based Recommendation – Uses a Machine Learning model (Random Forest) trained with Scikit-learn.
-Location-Based Recommendation – Uses Google's Gemini API based on location, crop, season, and soil type.
-🚀 Features..
-🧪 Accepts detailed soil reports and predicts optimal fertilizers using ML.
-📍 Uses Gemini API for farmers who don't know soil data, by analyzing location + crop data.
-🔐 Clerk-based user authentication.
-📊 Data visualization with Recharts.
-🌐 Seamless, fast frontend with React + Vite + TypeScript.
-🛠 Tech Stack
-Frontend
-Feature	Tech
-Framework	React + TypeScript
-Build Tool	Vite
-UI Libraries	shadcn-ui, Radix UI, Tailwind CSS
-State Management	React Hooks
-Authentication	Clerk
-Routing	React Router DOM
-Forms & Validation	React Hook Form + Zod
-Data Visualization	Recharts
-HTTP Client	Axios
-API Integration	TanStack React Query..
+The `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.
 
-Backend: This project does connects to external APIs like Gemini and optionally a hosted ML model.
+**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.
 
-🧠 How It Works
-1. Soil-Based Recommendation (Machine Learning)
-Input: N, P, K, pH, Moisture, Humidity, Temperature, Crop.
-Output: A recommended fertilizer based on Random Forest classification.
-2. Location-Based Recommendation (Gemini API)
-Input: Location, Crop Type, Soil Type, Season.
-Output: AI-generated fertilizer suggestions from Gemini API.
+## Usage
+
+```js
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </>
+  );
+}
+
+const root = createRoot(document.getElementById('root'));
+root.render(<Counter />);
+```
+
+## Documentation
+
+See https://react.dev/
+
+## API
+
+See https://react.dev/reference/react
